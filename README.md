@@ -1,4 +1,4 @@
-# Desigualdade de Gênero nos Cursos de Exatas e Tecnologia no Ceará
+# Desigualdade de gênero nos cursos de Exatas e Tecnologia no Ceará
 ### Uma Análise Exploratória dos Dados do INEP (2010–2024)
 
 ![UFC](https://img.shields.io/badge/UFC-Estatística-blue)
@@ -7,64 +7,67 @@
 
 ---
 
-## 📋 Sobre o projeto
+## Sobre o projeto
 
-Este repositório contém os scripts e dados processados referentes ao artigo
-científico produzido com base na disciplina de **Análise Exploratória de
-Dados (AED)** do curso de **Bacharelado em Estatística da UFC**, como parte
-do projeto *Estatística em Diversas Áreas de Atuação*.
+Este repositório reúne os scripts e os dados processados utilizados na análise exploratória 
+desenvolvida no âmbito da disciplina de **Análise Exploratória de Dados (AED)**, do curso de
+**Bacharelado em Estatística da Universidade Federal do Ceará (UFC)**, como parte do projeto
+**Estatística em Diversas Áreas de Atuação**.
 
-A pesquisa investiga a participação feminina nos cursos de Computação/TI,
-Matemática e Estatística nas instituições de ensino superior do Ceará entre
-2010 e 2024, comparando esse panorama com os demais estados do Nordeste
-e com a média nacional.
-
----
-
-## ❓ Pergunta de Pesquisa
-
-> Como se configura a participação feminina nos cursos de Computação/TI,
-> Matemática e Estatística nas IES do Ceará entre 2010 e 2024, e de que
-> forma esse cenário se compara aos demais estados do Nordeste e à média
-> nacional?
+O trabalho está relacionado à elaboração de um artigo sobre a participação feminina nos cursos 
+de Computação/TI, Matemática e Estatística nas instituições de ensino superior do Ceará entre
+2010 e 2024. A análise também contempla comparações com os demais estados do Nordeste e com a 
+média nacional.
 
 ---
 
-## 🗂️ Estrutura do Repositório   desigualdade-genero-stem-ceara/
+## Pergunta de Pesquisa
+
+Como se configura a participação feminina nos cursos de Computação/TI, Matemática e Estatística 
+nas instituições de ensino superior do Ceará entre 2010 e 2024, e como esse cenário se compara 
+ao observado nos demais estados do Nordeste e na média nacional?
+
+---
+
+## Estrutura do Repositório   
+
+desigualdade-genero-stem-ceara/
 ├── data/
-│ ├── raw/ # Microdados brutos do INEP (não versionados)
-│ └── processed/ # Dados tratados e filtrados
+│   ├── raw/                 # Microdados brutos do INEP (não versionados)
+│   └── processed/           # Dados tratados e filtrados
 ├── scripts/
-│ ├── 01_carregamento.R
-│ ├── 02_limpeza.R
-│ ├── 03_descritiva.R
-│ └── 04_visualizacoes.R
+│   ├── 01_carregamento.R
+│   ├── 02_limpeza.R
+│   ├── 03_descritiva.R
+│   └── 04_visualizacoes.R
 ├── output/
-│ └── figures/ # Gráficos exportados
+│   └── figures/             # Gráficos exportados
 ├── docs/
-│ └── dicionario_variaveis.md
+│   └── dicionario_variaveis.md
 └── README.md
 
-## 🗄️ Fonte dos Dados
+## Fonte dos Dados
 
-Os microdados utilizados são do **Censo da Educação Superior** do INEP
-(Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira),
-disponíveis publicamente em:
+Os dados utilizados são provenientes do **Censo da Educação Superior**, realizado pelo
+Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
+
+Os microdados estão disponíveis publicamente no portal oficial do INEP:
 🔗 https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior
 
-> Os arquivos brutos não estão versionados neste repositório devido ao
-> tamanho. Faça o download diretamente no portal do INEP.
+Os arquivos brutos não estão versionados neste repositório devido ao tamanho. Para reproduzir a análise 
+a partir dos dados originais, é necessário baixá-los diretamente no portal do INEP.
 
 ---
 
-## 🛠️ Ferramentas
+## Tecnologias e ferramentas
 
 - **Linguagem:** R
-- **Pacotes:** tidyverse, readr, ggplot2, dplyr
+- **Ambiente de desenvolvimento:** Visual Studio Code.
+- **Pacotes:** tidyverse e outros pacotes utilizados nos scripts, conforme as dependências efetivas do projeto.
 
 ---
 
-## 👩‍🔬 Autoria
+## Autoria e vínculo institucional
 
 - **Autora:** Yasmin Lopes Teixeira
 - **Orientadora:** Profa. Maria Jacqueline Batista
