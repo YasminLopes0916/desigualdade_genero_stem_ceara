@@ -48,7 +48,7 @@ desigualdade-genero-stem-ceara/
 └── README.md
 ```
 
-## Fonte dos Dados
+## Fonte dos dados
 
 Os dados utilizados são provenientes do **Censo da Educação Superior**, realizado pelo
 Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
