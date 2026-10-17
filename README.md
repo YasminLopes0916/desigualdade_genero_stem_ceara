@@ -21,16 +21,17 @@ média nacional.
 
 ---
 
-## Pergunta de Pesquisa
+## Pergunta de pesquisa
 
-Como se configura a participação feminina nos cursos de Computação/TI, Matemática e Estatística 
-nas instituições de ensino superior do Ceará entre 2010 e 2024, e como esse cenário se compara 
-ao observado nos demais estados do Nordeste e na média nacional?
+> Como se configura a participação feminina nos cursos de Computação/TI, Matemática e Estatística
+nas instituições de ensino superior do Ceará entre 2010 e 2024, e como esse cenário se compara ao
+observado nos demais estados do Nordeste e na média nacional?
 
 ---
 
-## Estrutura do Repositório   
+## Estrutura do repositório
 
+```text
 desigualdade-genero-stem-ceara/
 ├── data/
 │   ├── raw/                 # Microdados brutos do INEP (não versionados)
@@ -45,6 +46,7 @@ desigualdade-genero-stem-ceara/
 ├── docs/
 │   └── dicionario_variaveis.md
 └── README.md
+```
 
 ## Fonte dos Dados
 
@@ -54,8 +56,13 @@ Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
 Os microdados estão disponíveis publicamente no portal oficial do INEP:
 🔗 https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior
 
-Os arquivos brutos não estão versionados neste repositório devido ao tamanho. Para reproduzir a análise 
-a partir dos dados originais, é necessário baixá-los diretamente no portal do INEP.
+Os arquivos brutos não estão versionados neste repositório devido ao seu tamanho. Para reproduzir a análise 
+a partir dos dados originais, é necessário realizar o download dos arquivos correspondentes no portal do INEP.
+
+**Período analisado:** 2010–2024.
+
+**Tratamento dos dados:** os microdados são submetidos a etapas de carregamento, limpeza, filtragem e organização, 
+conforme documentado nos scripts disponíveis no diretório scripts/.
 
 ---
 
