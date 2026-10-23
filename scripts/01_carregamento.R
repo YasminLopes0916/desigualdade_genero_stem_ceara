@@ -17,41 +17,35 @@ anos <- 2010:2022
 # Recebe um ano e retorna o dataframe do arquivo CURSO daquele ano.
 ler_curso <- function(ano) {
   
-  # Caminho da subpasta do ano dentro de data/raw/
+  # Caminho da pasta do ano (renomeada para 2010, 2011, ...)
   pasta_ano <- here("data", "raw", as.character(ano))
   
-  # Lista os arquivos CSV na pasta (o nome pode variar entre anos)
+  # Lista todos os arquivos na pasta do ano, recursivamente
+  # (os CSVs estão em data/raw/<ano>/dados/)
   arquivos <- list.files(
     pasta_ano,
-    pattern = "\\.CSV$|\\.csv$",   # aceita maiúsculas e minúsculas
     full.names = TRUE,
+    recursive = TRUE,
     ignore.case = TRUE
   )
   
-  # Se não encontrar nenhum CSV, avisa e retorna NULL
-  if (length(arquivos) == 0) {
-    warning(paste("Nenhum CSV encontrado em:", pasta_ano))
-    return(NULL)
-  }
-  
-  # Se houver mais de um CSV, escolhe o que contém "CURSO" no nome
-  # (os microdados do INEP trazem arquivos de IES, CURSO, ALUNO, etc.)
-  arquivo_curso <- arquivos[str_detect(basename(arquivos), "CURSO")]
+  # Filtra o arquivo que contém "CURSOS" no nome
+  # (ignora md5, IES, PDFs, XLSX, etc.)
+  arquivo_curso <- arquivos[str_detect(basename(arquivos), "CURSOS")]
   
   if (length(arquivo_curso) == 0) {
-    warning(paste("Nenhum arquivo de CURSO encontrado em:", pasta_ano))
+    warning(paste("Nenhum arquivo de CURSOS encontrado em:", pasta_ano))
     return(NULL)
   }
   
-  # Lê o CSV com as configurações do INEP
+  # Lê o CSV
   dados <- read_delim(
     arquivo_curso[1],
     delim = ";",
     locale = locale(encoding = "latin1"),
-    col_types = cols(.default = "c")   # lê tudo como texto (evita notação científica)
+    col_types = cols(.default = "c")
   )
   
-  # Adiciona a coluna de ano
   dados <- dados |> mutate(ano = ano)
   
   return(dados)
