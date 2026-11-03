@@ -78,7 +78,7 @@ Os dados utilizados são provenientes do **Censo da Educação Superior**, reali
    source("scripts/00_setup.R")
 3. Rode os scripts na ordem:
    ```r
-   source("scripts/01_carregamento.R")
+    source("scripts/01_carregamento.R")
     source("scripts/02_harmonizacao.R")
     source("scripts/03_filtragem.R")
     source("scripts/04_descritiva.R")
