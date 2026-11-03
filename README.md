@@ -74,23 +74,26 @@ Os dados utilizados são provenientes do **Censo da Educação Superior**, reali
 
 1. Baixe os microdados do Censo da Educação Superior (2010–2022) no portal do INEP e coloque-os em `data/raw/`, organizados por ano.
 2. Instale os pacotes necessários:
-   ```r
-   source("scripts/00_setup.R")
+```r
+source("scripts/00_setup.R")
+```
 3. Rode os scripts na ordem:
-   ```r
-    source("scripts/01_carregamento.R")
-    source("scripts/02_harmonizacao.R")
-    source("scripts/03_filtragem.R")
-    source("scripts/04_descritiva.R")
-    source("scripts/05_series_temporais.R")
-    source("scripts/06_visualizacoes.R")
-    source("scripts/07_outliers.R")
-    source("scripts/08_histograma_ramo.R")
-    source("scripts/09_barras_empilhadas.R")
-    source("scripts/10_comparacao_regional.R")
+```r
+source("scripts/01_carregamento.R")
+source("scripts/02_harmonizacao.R")
+source("scripts/03_filtragem.R")
+source("scripts/04_descritiva.R")
+source("scripts/05_series_temporais.R")
+source("scripts/06_visualizacoes.R")
+source("scripts/07_outliers.R")
+source("scripts/08_histograma_ramo.R")
+source("scripts/09_barras_empilhadas.R")
+source("scripts/10_comparacao_regional.R")
+```
 4. Os resultados (figuras e tabelas) serão gerados em output/.
 
 **Nota:** O arquivo data/processed/ceara_final.rds (dados processados) não está versionado. Ele é gerado pelo script 03_filtragem.R.
+
 ---
 
 ## Autoria e vínculo institucional
