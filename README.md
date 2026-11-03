@@ -47,7 +47,6 @@ desigualdade_genero_stem_ceara/
 ├── docs/
 │   └── artigo_final.pdf     # Versão final do artigo
 └── README.md
-```
 Fonte dos dados
 Os dados utilizados são provenientes do Censo da Educação Superior, realizado pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
 
@@ -78,12 +77,17 @@ Ambiente de desenvolvimento: Visual Studio Code
 Pacotes principais: tidyverse (dplyr, readr, ggplot2, etc.) e here
 
 Como reproduzir a análise
-1. Baixe os microdados do Censo da Educação Superior (2010–2022) no portal do INEP e coloque-os em data/raw/, organizados por ano.
+Baixe os microdados do Censo da Educação Superior (2010–2022) no portal do INEP e coloque-os em data
+/raw/
+, organizados por ano.
 
-2. Instale os pacotes necessários:
+Instale os pacotes necessários:
+
+r
 source("scripts/00_setup.R")
+Rode os scripts na ordem:
 
-3. Rode os scripts na ordem:
+r
 source("scripts/01_carregamento.R")
 source("scripts/02_harmonizacao.R")
 source("scripts/03_filtragem.R")
@@ -94,8 +98,8 @@ source("scripts/07_outliers.R")
 source("scripts/08_histograma_ramo.R")
 source("scripts/09_barras_empilhadas.R")
 source("scripts/10_comparacao_regional.R")
+Os resultados (figuras e tabelas) serão gerados em output/.
 
-4. Os resultados (figuras e tabelas) serão gerados em output/.
 Nota: O arquivo data/processed/ceara_final.rds (dados processados) não está versionado. Ele é gerado pelo script 03_filtragem.R.
 
 Autoria e vínculo institucional
