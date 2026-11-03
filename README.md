@@ -48,6 +48,7 @@ desigualdade_genero_stem_ceara/
 │   └── artigo_final.pdf     # Versão final do artigo
 └── README.md
 ```
+
 ---
 
 ## Fonte dos dados
