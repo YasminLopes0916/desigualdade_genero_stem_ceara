@@ -47,66 +47,20 @@ desigualdade_genero_stem_ceara/
 ├── docs/
 │   └── artigo_final.pdf     # Versão final do artigo
 └── README.md
-Fonte dos dados
-Os dados utilizados são provenientes do Censo da Educação Superior, realizado pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
+```
+---
 
-Os microdados estão disponíveis publicamente no portal oficial do INEP:
-🔗 https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior
+## Fonte dos dados
 
-Os arquivos brutos não estão versionados neste repositório devido ao seu tamanho. Para reproduzir a análise a partir dos dados originais, é necessário realizar o download dos arquivos correspondentes no portal do INEP.
+Os dados utilizados são provenientes do **Censo da Educação Superior**, realizado pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
 
-Período analisado: 2010–2022 (13 edições).
+... (restante do texto normal, com os ## e **)
 
-Tratamento dos dados: os microdados são submetidos a etapas de carregamento, harmonização, filtragem e organização, conforme documentado nos scripts disponíveis no diretório scripts/.
+---
 
-Decisões metodológicas principais:
+## Autoria e vínculo institucional
 
-Definição de STEM: UNESCO/ISCED-F 2013 (áreas CINE 05, 06 e 07).
-
-Corte de 10 matrículas por célula Curso-IES-Ano (com análise de sensibilidade em 50).
-
-Agregação da Matemática (EaD + Presencial) devido à oferta residual de EaD.
-
-Unidade de análise: curso ofertado (UF do local de oferta).
-
-Tecnologias e ferramentas
-Linguagem: R (versão 4.6.1)
-
-Ambiente de desenvolvimento: Visual Studio Code
-
-Pacotes principais: tidyverse (dplyr, readr, ggplot2, etc.) e here
-
-Como reproduzir a análise
-Baixe os microdados do Censo da Educação Superior (2010–2022) no portal do INEP e coloque-os em data
-/raw/
-, organizados por ano.
-
-Instale os pacotes necessários:
-
-r
-source("scripts/00_setup.R")
-Rode os scripts na ordem:
-
-r
-source("scripts/01_carregamento.R")
-source("scripts/02_harmonizacao.R")
-source("scripts/03_filtragem.R")
-source("scripts/04_descritiva.R")
-source("scripts/05_series_temporais.R")
-source("scripts/06_visualizacoes.R")
-source("scripts/07_outliers.R")
-source("scripts/08_histograma_ramo.R")
-source("scripts/09_barras_empilhadas.R")
-source("scripts/10_comparacao_regional.R")
-Os resultados (figuras e tabelas) serão gerados em output/.
-
-Nota: O arquivo data/processed/ceara_final.rds (dados processados) não está versionado. Ele é gerado pelo script 03_filtragem.R.
-
-Autoria e vínculo institucional
-Autora: Yasmin Lopes Teixeira
-
-Orientadora: Profa. Maria Jacqueline Batista
-
-Instituição: Universidade Federal do Ceará (UFC)
-
-Programa: Iniciação Acadêmica (BIA) — PNAES/PRAE
+- **Autora:** Yasmin Lopes Teixeira
+- **Orientadora:** Profa. Maria Jacqueline Batista
+- **Instituição:** Universidade Federal do Ceará (UFC)
+- **Programa:** Iniciação Acadêmica (BIA) — PNAES/PRAE
